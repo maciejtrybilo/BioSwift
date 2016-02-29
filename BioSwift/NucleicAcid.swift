@@ -58,6 +58,11 @@ public struct NucleicAcid: Equatable, CustomStringConvertible {
         return NucleicAcid(nucleotides: nucleotides)
     }
     
+    public func reverse() -> NucleicAcid {
+        
+        return NucleicAcid(nucleotides: nucleotides.reverse())
+    }
+    
     public func toString() -> String {
         
         var string = ""

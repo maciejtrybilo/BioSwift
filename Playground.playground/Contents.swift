@@ -8,6 +8,6 @@ let guanine = Nucleotide.G
 let cytosine = Nucleotide.C
 
 let dna = NucleicAcid("GATCCTG")!
-dna.complement()
-
+let complement = dna.complement()
+let reverse = complement.reverse()
 

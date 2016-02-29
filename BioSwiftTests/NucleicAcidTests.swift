@@ -49,6 +49,14 @@ class NucleicAcidTests: XCTestCase {
             NucleicAcid("TGACCGGATA")!)
     }
     
+    func test_reverse() {
+        
+        XCTAssertEqual(
+            NucleicAcid("ACTGGCCTAT")!.reverse(),
+            NucleicAcid("TATCCGGTCA")!)
+        
+    }
+    
     func test_toString() {
         
         XCTAssertEqual(NucleicAcid("ACTGGCCTAT")!.toString(), "ACTGGCCTAT")
