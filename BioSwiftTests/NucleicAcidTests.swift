@@ -27,7 +27,7 @@ import XCTest
 
 class NucleicAcidTests: XCTestCase {
 
-    func testCreation() {
+    func test_init() {
         
         XCTAssertNotNil(NucleicAcid("ACTGGCCTAT"))
         XCTAssertNil(NucleicAcid("ACTGG😺CCTAT"))
@@ -36,13 +36,13 @@ class NucleicAcidTests: XCTestCase {
         XCTAssertEqual(NucleicAcid("ACTGGCCTAT")!, NucleicAcid(nucleotides: [.A, .C, .T, .G, .G, .C, .C, .T, .A, .T]))
     }
     
-    func testEquatable() {
+    func test_equals() {
         
         XCTAssertEqual(NucleicAcid(nucleotides: [.A]), NucleicAcid(nucleotides: [.A]))
         XCTAssertNotEqual(NucleicAcid(nucleotides: [.A]), NucleicAcid(nucleotides: [.T]))
     }
     
-    func testComplement() {
+    func test_complement() {
         
         XCTAssertEqual(
             NucleicAcid("ACTGGCCTAT")!.complement(),
