@@ -12,6 +12,9 @@
 		59DB66861C84F17B007731B9 /* Nucleotide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB66851C84F17B007731B9 /* Nucleotide.swift */; };
 		59DB66891C84F1AB007731B9 /* NucleotideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB66881C84F1AB007731B9 /* NucleotideTests.swift */; };
 		59DB668A1C84F1E5007731B9 /* Nucleotide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB66851C84F17B007731B9 /* Nucleotide.swift */; };
+		59DB668C1C84F757007731B9 /* NucleicAcidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB668B1C84F757007731B9 /* NucleicAcidTests.swift */; };
+		59DB668E1C84F7EF007731B9 /* NucleicAcid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB668D1C84F7EF007731B9 /* NucleicAcid.swift */; };
+		59DB668F1C84F8C5007731B9 /* NucleicAcid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB668D1C84F7EF007731B9 /* NucleicAcid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,8 @@
 		59DB66851C84F17B007731B9 /* Nucleotide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nucleotide.swift; sourceTree = "<group>"; };
 		59DB66871C84F1AB007731B9 /* BioSwiftTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BioSwiftTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		59DB66881C84F1AB007731B9 /* NucleotideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NucleotideTests.swift; sourceTree = "<group>"; };
+		59DB668B1C84F757007731B9 /* NucleicAcidTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NucleicAcidTests.swift; sourceTree = "<group>"; };
+		59DB668D1C84F7EF007731B9 /* NucleicAcid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NucleicAcid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +83,7 @@
 				59DB666E1C84EFA3007731B9 /* BioSwift.h */,
 				59DB66701C84EFA3007731B9 /* Info.plist */,
 				59DB66851C84F17B007731B9 /* Nucleotide.swift */,
+				59DB668D1C84F7EF007731B9 /* NucleicAcid.swift */,
 			);
 			path = BioSwift;
 			sourceTree = "<group>";
@@ -86,8 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				59DB667C1C84EFA3007731B9 /* Info.plist */,
-				59DB66881C84F1AB007731B9 /* NucleotideTests.swift */,
 				59DB66871C84F1AB007731B9 /* BioSwiftTests-Bridging-Header.h */,
+				59DB66881C84F1AB007731B9 /* NucleotideTests.swift */,
+				59DB668B1C84F757007731B9 /* NucleicAcidTests.swift */,
 			);
 			path = BioSwiftTests;
 			sourceTree = "<group>";
@@ -200,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59DB668E1C84F7EF007731B9 /* NucleicAcid.swift in Sources */,
 				59DB66861C84F17B007731B9 /* Nucleotide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +216,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59DB668F1C84F8C5007731B9 /* NucleicAcid.swift in Sources */,
 				59DB66891C84F1AB007731B9 /* NucleotideTests.swift in Sources */,
+				59DB668C1C84F757007731B9 /* NucleicAcidTests.swift in Sources */,
 				59DB668A1C84F1E5007731B9 /* Nucleotide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
