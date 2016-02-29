@@ -1,5 +1,5 @@
 //
-//  BioSwift.h
+//  Nucleotide.swift
 //  BioSwift
 //
 //  Created by Maciej Trybilo on 29/02/2016.
@@ -23,14 +23,46 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Cocoa/Cocoa.h>
-
-//! Project version number for BioSwift.
-FOUNDATION_EXPORT double BioSwiftVersionNumber;
-
-//! Project version string for BioSwift.
-FOUNDATION_EXPORT const unsigned char BioSwiftVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <BioSwift/PublicHeader.h>
-
-
+enum Nucleotide {
+    
+    case A, C, G, T
+    
+    init?(_ character: Character) {
+        
+        switch character {
+        case "A", "a": self = .A
+        case "C", "c": self = .C
+        case "G", "g": self = .G
+        case "T", "t": self = .T
+        default: return nil
+        }
+    }
+    
+    init?(_ string: String) {
+        
+        if string.characters.count == 1 {
+            self.init(string.characters.first!)
+        } else {
+            return nil
+        }
+    }
+    
+    func complementary(other: Nucleotide) -> Bool {
+        
+        switch (self, other) {
+        case (.A, .T), (.T, .A), (.C, .G), (.G, .C): return true
+        default: return false
+        }
+    }
+    
+    func complement() -> Nucleotide {
+        
+        switch self {
+        case .A: return .T
+        case .C: return .G
+        case .G: return .C
+        case .T: return .A
+        }
+    }
+    
+}

@@ -1,5 +1,5 @@
 //
-//  BioSwift.h
+//  NucleotideTests.swift
 //  BioSwift
 //
 //  Created by Maciej Trybilo on 29/02/2016.
@@ -23,14 +23,45 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Cocoa/Cocoa.h>
+import XCTest
 
-//! Project version number for BioSwift.
-FOUNDATION_EXPORT double BioSwiftVersionNumber;
+class NucleotideTests: XCTestCase {
+    
+    let adenine = Nucleotide("A")!
+    let cytosine = Nucleotide("C")!
+    let guanine = Nucleotide("G")!
+    let thymine = Nucleotide("T")!
 
-//! Project version string for BioSwift.
-FOUNDATION_EXPORT const unsigned char BioSwiftVersionString[];
+    func testCreation() {
+        
+        XCTAssertNotNil(Nucleotide("A"))
+        XCTAssertNotNil(Nucleotide("a"))
+        
+        XCTAssertNotNil(Nucleotide("C"))
+        XCTAssertNotNil(Nucleotide("c"))
+        
+        XCTAssertNotNil(Nucleotide("G"))
+        XCTAssertNotNil(Nucleotide("g"))
+        
+        XCTAssertNotNil(Nucleotide("T"))
+        XCTAssertNotNil(Nucleotide("t"))
+    }
+    
+    func testComplementarity() {
+        
+        XCTAssertTrue(adenine.complementary(thymine))
+        XCTAssertFalse(adenine.complementary(cytosine))
+        XCTAssertFalse(adenine.complementary(adenine))
+        
+        XCTAssertTrue(guanine.complementary(cytosine))
+    }
 
-// In this header, you should import all the public headers of your framework using statements like #import <BioSwift/PublicHeader.h>
-
-
+    func testComplement() {
+        
+        XCTAssertEqual(adenine.complement(), thymine)
+        XCTAssertEqual(thymine.complement(), adenine)
+        XCTAssertEqual(cytosine.complement(), guanine)
+        XCTAssertEqual(guanine.complement(), cytosine)
+    }
+    
+}
