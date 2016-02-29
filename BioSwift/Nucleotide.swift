@@ -23,11 +23,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-enum Nucleotide {
+public enum Nucleotide {
     
     case A, C, G, T
     
-    init?(_ character: Character) {
+    public init?(_ character: Character) {
         
         switch character {
         case "A", "a": self = .A
@@ -38,7 +38,7 @@ enum Nucleotide {
         }
     }
     
-    init?(_ string: String) {
+    public init?(_ string: String) {
         
         if string.characters.count == 1 {
             self.init(string.characters.first!)
@@ -47,7 +47,7 @@ enum Nucleotide {
         }
     }
     
-    func complementary(other: Nucleotide) -> Bool {
+    public func complementary(other: Nucleotide) -> Bool {
         
         switch (self, other) {
         case (.A, .T), (.T, .A), (.C, .G), (.G, .C): return true
@@ -55,7 +55,7 @@ enum Nucleotide {
         }
     }
     
-    func complement() -> Nucleotide {
+    public func complement() -> Nucleotide {
         
         switch self {
         case .A: return .T
@@ -65,7 +65,7 @@ enum Nucleotide {
         }
     }
     
-    func toCharacter() -> Character {
+    public func toCharacter() -> Character {
         
         switch self {
         case .A: return "A"

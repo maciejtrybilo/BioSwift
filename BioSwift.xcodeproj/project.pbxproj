@@ -405,6 +405,7 @@
 				59DB66811C84EFA3007731B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		59DB66821C84EFA3007731B9 /* Build configuration list for PBXNativeTarget "BioSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +414,7 @@
 				59DB66841C84EFA3007731B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

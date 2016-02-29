@@ -23,15 +23,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-struct NucleicAcid: Equatable, CustomStringConvertible {
+public struct NucleicAcid: Equatable, CustomStringConvertible {
     
     var nucleotides = [Nucleotide]()
     
-    init(nucleotides: [Nucleotide]) {
+    public init(nucleotides: [Nucleotide]) {
         self.nucleotides = nucleotides
     }
     
-    init?(_ string: String) {
+    public init?(_ string: String) {
         
         if string.isEmpty {
             return nil
@@ -47,7 +47,7 @@ struct NucleicAcid: Equatable, CustomStringConvertible {
         }
     }
     
-    func complement() -> NucleicAcid {
+    public func complement() -> NucleicAcid {
         
         var nucleotides = [Nucleotide]()
         
@@ -58,7 +58,7 @@ struct NucleicAcid: Equatable, CustomStringConvertible {
         return NucleicAcid(nucleotides: nucleotides)
     }
     
-    func toString() -> String {
+    public func toString() -> String {
         
         var string = ""
         
@@ -74,14 +74,14 @@ struct NucleicAcid: Equatable, CustomStringConvertible {
 
 extension NucleicAcid {
     
-    var description: String {
+    public var description: String {
         return toString()
     }
 }
 
 // MARK: - Equatable
 
-func ==(lhs: NucleicAcid, rhs: NucleicAcid) -> Bool {
+public func ==(lhs: NucleicAcid, rhs: NucleicAcid) -> Bool {
     
     if lhs.nucleotides.count != rhs.nucleotides.count { return false }
     
