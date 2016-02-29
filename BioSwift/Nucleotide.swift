@@ -65,4 +65,14 @@ enum Nucleotide {
         }
     }
     
+    func toCharacter() -> Character {
+        
+        switch self {
+        case .A: return "A"
+        case .C: return "C"
+        case .G: return "G"
+        case .T: return "T"
+        }
+    }
+    
 }

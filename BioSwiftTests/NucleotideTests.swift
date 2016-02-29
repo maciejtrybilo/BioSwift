@@ -45,6 +45,8 @@ class NucleotideTests: XCTestCase {
         
         XCTAssertNotNil(Nucleotide("T"))
         XCTAssertNotNil(Nucleotide("t"))
+        
+        XCTAssertNil(Nucleotide(""))
     }
     
     func testComplementarity() {
@@ -62,6 +64,14 @@ class NucleotideTests: XCTestCase {
         XCTAssertEqual(thymine.complement(), adenine)
         XCTAssertEqual(cytosine.complement(), guanine)
         XCTAssertEqual(guanine.complement(), cytosine)
+    }
+    
+    func test_toCharacter() {
+        
+        XCTAssertEqual(adenine.toCharacter(), "A")
+        XCTAssertEqual(cytosine.toCharacter(), "C")
+        XCTAssertEqual(guanine.toCharacter(), "G")
+        XCTAssertEqual(thymine.toCharacter(), "T")
     }
     
 }
