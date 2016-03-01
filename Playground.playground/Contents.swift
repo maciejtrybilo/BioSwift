@@ -11,3 +11,7 @@ let dna = NucleicAcid("GATCCTG")!
 let complement = dna.complement()
 let reverse = complement.reverse()
 
+let fullFASTA = "ACGTURYKMSWBDHVN-"
+
+let fullFASTASequence = NucleicAcid(fullFASTA)
+fullFASTASequence?.complement()

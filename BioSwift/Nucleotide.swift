@@ -25,7 +25,7 @@
 
 public enum Nucleotide {
     
-    case A, C, G, T
+    case A, C, G, T, U, R, Y, K, M, S, W, B, D, H, V, N, GAP
     
     public init?(_ character: Character) {
         
@@ -34,6 +34,19 @@ public enum Nucleotide {
         case "C", "c": self = .C
         case "G", "g": self = .G
         case "T", "t": self = .T
+        case "U", "u": self = .U
+        case "R", "r": self = .R
+        case "Y", "y": self = .Y
+        case "K", "k": self = .K
+        case "M", "m": self = .M
+        case "S", "s": self = .S
+        case "W", "w": self = .W
+        case "B", "b": self = .B
+        case "D", "d": self = .D
+        case "H", "h": self = .H
+        case "V", "v": self = .V
+        case "N", "n": self = .N
+        case "-": self = .GAP
         default: return nil
         }
     }
@@ -50,7 +63,17 @@ public enum Nucleotide {
     public func complementary(other: Nucleotide) -> Bool {
         
         switch (self, other) {
-        case (.A, .T), (.T, .A), (.C, .G), (.G, .C): return true
+        case (.A, .T), (.T, .A): return true
+        case (.C, .G), (.G, .C): return true
+        case (.A, .U), (.U, .A): return true
+        case (.R, .Y), (.Y, .R): return true
+        case (.K, .M), (.M, .K): return true
+        case (.S, .S): return true
+        case (.W, .W): return true
+        case (.B, .V), (.V, .B): return true
+        case (.D, .H), (.H, .D): return true
+        case (.N, .N): return true
+        case (.GAP, .GAP): return true
         default: return false
         }
     }
@@ -58,10 +81,23 @@ public enum Nucleotide {
     public func complement() -> Nucleotide {
         
         switch self {
-        case .A: return .T
+        case .A: return .T // .U?
         case .C: return .G
         case .G: return .C
         case .T: return .A
+        case .U: return .A
+        case .R: return .Y
+        case .Y: return .R
+        case .K: return .M
+        case .M: return .K
+        case .S: return .S
+        case .W: return .W
+        case .B: return .V
+        case .D: return .H
+        case .H: return .D
+        case .V: return .B
+        case .N: return .N
+        case .GAP: return .GAP
         }
     }
     
@@ -72,6 +108,19 @@ public enum Nucleotide {
         case .C: return "C"
         case .G: return "G"
         case .T: return "T"
+        case .U: return "U"
+        case .R: return "R"
+        case .Y: return "Y"
+        case .K: return "K"
+        case .M: return "M"
+        case .S: return "S"
+        case .W: return "W"
+        case .B: return "B"
+        case .D: return "D"
+        case .H: return "H"
+        case .V: return "V"
+        case .N: return "N"
+        case .GAP: return "-"
         }
     }
     

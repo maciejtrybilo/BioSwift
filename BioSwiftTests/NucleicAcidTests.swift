@@ -36,6 +36,17 @@ class NucleicAcidTests: XCTestCase {
         XCTAssertEqual(NucleicAcid("ACTGGCCTAT")!, NucleicAcid(nucleotides: [.A, .C, .T, .G, .G, .C, .C, .T, .A, .T]))
     }
     
+    func test_fullFASTA() {
+        
+        let string = "ACGTURYKMSWBDHVN-"
+        
+        let sequence = NucleicAcid(string)
+        
+        XCTAssertNotNil(sequence)
+        
+        XCTAssertEqual(sequence!.toString(), string)
+    }
+    
     func test_equals() {
         
         XCTAssertEqual(NucleicAcid(nucleotides: [.A]), NucleicAcid(nucleotides: [.A]))
