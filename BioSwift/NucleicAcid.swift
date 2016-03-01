@@ -23,11 +23,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+import Foundation
+
 public struct NucleicAcid: Equatable, CustomStringConvertible {
     
+    public let defline: String?
     let nucleotides: [Nucleotide]
     
     public init(nucleotides: [Nucleotide]) {
+        self.defline = nil
         self.nucleotides = nucleotides
     }
     
@@ -39,12 +43,24 @@ public struct NucleicAcid: Equatable, CustomStringConvertible {
         
         var nucleotides = [Nucleotide]()
         
-        for character in string.characters {
+        var lines = string.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+        
+        if let firstLine = lines.first where firstLine.hasPrefix(">") {
             
-            if let nucleotide = Nucleotide(character) {
-                nucleotides += [nucleotide]
-            } else {
-                return nil
+            self.defline = firstLine.substringFromIndex(firstLine.rangeOfString(">")!.startIndex.successor())
+            lines.removeFirst()
+        } else {
+            self.defline = nil
+        }
+        
+        for line in lines {
+            for character in line.characters {
+                
+                if let nucleotide = Nucleotide(character) {
+                    nucleotides += [nucleotide]
+                } else {
+                    return nil
+                }
             }
         }
         

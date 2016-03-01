@@ -29,11 +29,16 @@ class NucleicAcidTests: XCTestCase {
 
     func test_init() {
         
-        XCTAssertNotNil(NucleicAcid("ACTGGCCTAT"))
-        XCTAssertNil(NucleicAcid("ACTGG😺CCTAT"))
+        XCTAssertNotNil(NucleicAcid("GATACAT"))
+        XCTAssertNil(NucleicAcid("GATA😺CAT"))
         XCTAssertNil(NucleicAcid(""))
         
-        XCTAssertEqual(NucleicAcid("ACTGGCCTAT")!, NucleicAcid(nucleotides: [.A, .C, .T, .G, .G, .C, .C, .T, .A, .T]))
+        XCTAssertEqual(NucleicAcid("ACTGGCTCAT")!, NucleicAcid(nucleotides: [.A, .C, .T, .G, .G, .C, .T, .C, .A, .T]))
+        
+        let sequence = NucleicAcid(">Meow gene 😸\nACTGTATG")
+        
+        XCTAssertEqual(sequence!.defline!, "Meow gene 😸")
+        XCTAssertEqual(sequence!.toString(), "ACTGTATG")
     }
     
     func test_fullFASTA() {
