@@ -25,7 +25,7 @@
 
 public struct NucleicAcid: Equatable, CustomStringConvertible {
     
-    var nucleotides = [Nucleotide]()
+    let nucleotides: [Nucleotide]
     
     public init(nucleotides: [Nucleotide]) {
         self.nucleotides = nucleotides
@@ -37,6 +37,8 @@ public struct NucleicAcid: Equatable, CustomStringConvertible {
             return nil
         }
         
+        var nucleotides = [Nucleotide]()
+        
         for character in string.characters {
             
             if let nucleotide = Nucleotide(character) {
@@ -45,6 +47,8 @@ public struct NucleicAcid: Equatable, CustomStringConvertible {
                 return nil
             }
         }
+        
+        self.nucleotides = nucleotides
     }
     
     public func complement() -> NucleicAcid {
