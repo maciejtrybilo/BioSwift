@@ -1,6 +1,3 @@
 language: objective-c
-osx_image: xcode7.2
-
-script:
-  - xcodebuild clean build test -workspace BioSwift.xcworkspace -scheme BioSwift -destination 'platform=OS X,arch=x86_64'
-
+xcode_workspace: BioSwift.xcworkspace
+xcode_scheme: BioSwift
