@@ -47,7 +47,15 @@ public struct NucleicAcid: Equatable, CustomStringConvertible {
         
         if let firstLine = lines.first where firstLine.hasPrefix(">") {
             
-            self.defline = firstLine.substringFromIndex(firstLine.rangeOfString(">")!.startIndex.successor())
+            // description starts after ">"
+            var defline = firstLine.substringFromIndex(firstLine.rangeOfString(">")!.startIndex.successor())
+            
+            // trim whitespace
+            defline = defline.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            
+            // don't add if only whitespace
+            self.defline = defline.isEmpty ? nil : defline
+            
             lines.removeFirst()
         } else {
             self.defline = nil

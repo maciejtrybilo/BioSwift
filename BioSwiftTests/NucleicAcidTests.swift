@@ -39,6 +39,11 @@ class NucleicAcidTests: XCTestCase {
         
         XCTAssertEqual(sequence!.defline!, "Meow gene 😸")
         XCTAssertEqual(sequence!.toString(), "ACTGTATG")
+        
+        let sequenceWithEmptyName = NucleicAcid("> \nACTGTATG")
+        
+        XCTAssertNil(sequenceWithEmptyName!.defline)
+        XCTAssertEqual(sequenceWithEmptyName!.toString(), "ACTGTATG")
     }
     
     func test_fullFASTA() {
