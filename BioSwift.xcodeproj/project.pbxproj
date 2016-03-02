@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59CED5201C8608250015DA3B /* example.fa in Resources */ = {isa = PBXBuildFile; fileRef = 59CED51F1C8608250015DA3B /* example.fa */; };
+		59CED5221C8609370015DA3B /* FASTAReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CED5211C8609370015DA3B /* FASTAReader.swift */; };
+		59CED5231C8609D80015DA3B /* FASTAReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CED5211C8609370015DA3B /* FASTAReader.swift */; };
+		59CED5251C860A010015DA3B /* FASTAReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CED5241C860A010015DA3B /* FASTAReaderTests.swift */; };
 		59DB666F1C84EFA3007731B9 /* BioSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 59DB666E1C84EFA3007731B9 /* BioSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		59DB66761C84EFA3007731B9 /* BioSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59DB666B1C84EFA3007731B9 /* BioSwift.framework */; };
 		59DB66861C84F17B007731B9 /* Nucleotide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB66851C84F17B007731B9 /* Nucleotide.swift */; };
@@ -28,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59CED51F1C8608250015DA3B /* example.fa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = example.fa; sourceTree = "<group>"; };
+		59CED5211C8609370015DA3B /* FASTAReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FASTAReader.swift; sourceTree = "<group>"; };
+		59CED5241C860A010015DA3B /* FASTAReaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FASTAReaderTests.swift; sourceTree = "<group>"; };
 		59DB666B1C84EFA3007731B9 /* BioSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BioSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59DB666E1C84EFA3007731B9 /* BioSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BioSwift.h; sourceTree = "<group>"; };
 		59DB66701C84EFA3007731B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +91,7 @@
 				59DB66701C84EFA3007731B9 /* Info.plist */,
 				59DB66851C84F17B007731B9 /* Nucleotide.swift */,
 				59DB668D1C84F7EF007731B9 /* NucleicAcid.swift */,
+				59CED5211C8609370015DA3B /* FASTAReader.swift */,
 			);
 			path = BioSwift;
 			sourceTree = "<group>";
@@ -95,6 +103,8 @@
 				59DB66871C84F1AB007731B9 /* BioSwiftTests-Bridging-Header.h */,
 				59DB66881C84F1AB007731B9 /* NucleotideTests.swift */,
 				59DB668B1C84F757007731B9 /* NucleicAcidTests.swift */,
+				59CED5241C860A010015DA3B /* FASTAReaderTests.swift */,
+				59CED51F1C8608250015DA3B /* example.fa */,
 			);
 			path = BioSwiftTests;
 			sourceTree = "<group>";
@@ -197,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59CED5201C8608250015DA3B /* example.fa in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59CED5221C8609370015DA3B /* FASTAReader.swift in Sources */,
 				59DB668E1C84F7EF007731B9 /* NucleicAcid.swift in Sources */,
 				59DB66861C84F17B007731B9 /* Nucleotide.swift in Sources */,
 			);
@@ -218,7 +230,9 @@
 			files = (
 				59DB668F1C84F8C5007731B9 /* NucleicAcid.swift in Sources */,
 				59DB66891C84F1AB007731B9 /* NucleotideTests.swift in Sources */,
+				59CED5231C8609D80015DA3B /* FASTAReader.swift in Sources */,
 				59DB668C1C84F757007731B9 /* NucleicAcidTests.swift in Sources */,
+				59CED5251C860A010015DA3B /* FASTAReaderTests.swift in Sources */,
 				59DB668A1C84F1E5007731B9 /* Nucleotide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
