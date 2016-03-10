@@ -31,7 +31,37 @@ public struct FASTAReader {
         
         var sequences = [NucleicAcid]()
         
-        print(NSFileManager.defaultManager().fileExistsAtPath(path))
+        var currentSequence = ""
+        
+        do {
+            let lines = try String(contentsOfFile: path).componentsSeparatedByCharactersInSet(.newlineCharacterSet())
+            
+            for line in lines {
+                
+                if line.hasPrefix(";") || line.hasPrefix(">") {
+                        
+                        if let nucleicAcid = NucleicAcid(currentSequence) {
+                        
+                            sequences += [nucleicAcid]
+                        }
+                        
+                        currentSequence = ""
+                }
+                
+                if !line.hasPrefix(";") && !line.isEmpty {
+                    
+                    currentSequence += (line + "\n")
+                }
+            }
+            
+            if let nucleicAcid = NucleicAcid(currentSequence) {
+                
+                sequences += [nucleicAcid]
+            }
+            
+        } catch _ {
+            return []
+        }
         
         return sequences
     }
