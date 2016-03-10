@@ -35,15 +35,23 @@ class NucleicAcidTests: XCTestCase {
         
         XCTAssertEqual(NucleicAcid("ACTGGCTCAT")!, NucleicAcid(nucleotides: [.A, .C, .T, .G, .G, .C, .T, .C, .A, .T]))
         
-        let sequence = NucleicAcid(">Meow gene 😸\nACTGTATG")
+        let sequence = NucleicAcid(">Meow_gene_😸 Protein encoding the meowing trait\nACTGTATG")
         
-        XCTAssertEqual(sequence!.defline!, "Meow gene 😸")
+        XCTAssertEqual(sequence!.identifier!, "Meow_gene_😸")
+        XCTAssertEqual(sequence!.desc!, "Protein encoding the meowing trait")
         XCTAssertEqual(sequence!.toString(), "ACTGTATG")
         
-        let sequenceWithEmptyName = NucleicAcid("> \nACTGTATG")
+        let sequenceWithNoName = NucleicAcid("> \nACTGTATG")
         
-        XCTAssertNil(sequenceWithEmptyName!.defline)
-        XCTAssertEqual(sequenceWithEmptyName!.toString(), "ACTGTATG")
+        XCTAssertNil(sequenceWithNoName!.identifier)
+        XCTAssertNil(sequenceWithNoName!.desc)
+        XCTAssertEqual(sequenceWithNoName!.toString(), "ACTGTATG")
+        
+        let sequenceWithJustDescription = NucleicAcid("> description here\nACTGTATG");
+        
+        XCTAssertNil(sequenceWithJustDescription!.identifier)
+        XCTAssertEqual(sequenceWithJustDescription!.desc, "description here")
+        XCTAssertEqual(sequenceWithJustDescription!.toString(), "ACTGTATG")
     }
     
     func test_fullFASTA() {

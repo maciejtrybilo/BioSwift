@@ -27,11 +27,14 @@ import Foundation
 
 public struct NucleicAcid: Equatable, CustomStringConvertible {
     
-    public let defline: String?
+    public let identifier: String?
+    public let desc: String?
     let nucleotides: [Nucleotide]
     
     public init(nucleotides: [Nucleotide]) {
-        self.defline = nil
+        
+        self.identifier = nil
+        self.desc = nil
         self.nucleotides = nucleotides
     }
     
@@ -43,23 +46,30 @@ public struct NucleicAcid: Equatable, CustomStringConvertible {
         
         var nucleotides = [Nucleotide]()
         
-        var lines = string.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+        var lines = string.componentsSeparatedByCharactersInSet(.newlineCharacterSet())
+        
+        var identifier: String? = nil
+        var desc: String? = nil
         
         if let firstLine = lines.first where firstLine.hasPrefix(">") {
             
             // description starts after ">"
-            var defline = firstLine.substringFromIndex(firstLine.rangeOfString(">")!.startIndex.successor())
+            let defline = firstLine.substringFromIndex(firstLine.rangeOfString(">")!.startIndex.successor())
             
-            // trim whitespace
-            defline = defline.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-            
-            // don't add if only whitespace
-            self.defline = defline.isEmpty ? nil : defline
+            if let nameEndIndex = defline.rangeOfCharacterFromSet(.whitespaceCharacterSet())?.startIndex {
+                
+                identifier = defline.substringToIndex(nameEndIndex).stringByTrimmingCharactersInSet(.whitespaceCharacterSet())
+                identifier = identifier!.isEmpty ? nil : identifier
+                
+                desc = defline.substringFromIndex(nameEndIndex).stringByTrimmingCharactersInSet(.whitespaceCharacterSet())
+                desc = desc!.isEmpty ? nil : desc
+            }
             
             lines.removeFirst()
-        } else {
-            self.defline = nil
         }
+        
+        self.identifier = identifier
+        self.desc = desc
         
         for line in lines {
             for character in line.characters {
