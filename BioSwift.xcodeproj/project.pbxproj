@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5937E6AD1C90831700BEA7C2 /* BioSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5937E6A31C90831700BEA7C2 /* BioSwift.framework */; };
+		5937E6BB1C9088CA00BEA7C2 /* NucleotideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB66881C84F1AB007731B9 /* NucleotideTests.swift */; };
+		5937E6BC1C9088CD00BEA7C2 /* NucleicAcidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB668B1C84F757007731B9 /* NucleicAcidTests.swift */; };
+		5937E6BD1C9088CF00BEA7C2 /* FASTAReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CED5241C860A010015DA3B /* FASTAReaderTests.swift */; };
+		5937E6BE1C9088FB00BEA7C2 /* example.fa in Resources */ = {isa = PBXBuildFile; fileRef = 59CED51F1C8608250015DA3B /* example.fa */; };
+		5937E6BF1C908AAC00BEA7C2 /* Nucleotide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB66851C84F17B007731B9 /* Nucleotide.swift */; };
+		5937E6C01C908AAD00BEA7C2 /* Nucleotide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB66851C84F17B007731B9 /* Nucleotide.swift */; };
+		5937E6C11C908AB200BEA7C2 /* BioSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 59DB666E1C84EFA3007731B9 /* BioSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5937E6C21C908ABA00BEA7C2 /* NucleicAcid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB668D1C84F7EF007731B9 /* NucleicAcid.swift */; };
+		5937E6C31C908ABB00BEA7C2 /* NucleicAcid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DB668D1C84F7EF007731B9 /* NucleicAcid.swift */; };
+		5937E6C41C908ABE00BEA7C2 /* FASTAReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CED5211C8609370015DA3B /* FASTAReader.swift */; };
+		5937E6C51C908ABE00BEA7C2 /* FASTAReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CED5211C8609370015DA3B /* FASTAReader.swift */; };
 		59CED5201C8608250015DA3B /* example.fa in Resources */ = {isa = PBXBuildFile; fileRef = 59CED51F1C8608250015DA3B /* example.fa */; };
 		59CED5221C8609370015DA3B /* FASTAReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CED5211C8609370015DA3B /* FASTAReader.swift */; };
 		59CED5231C8609D80015DA3B /* FASTAReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CED5211C8609370015DA3B /* FASTAReader.swift */; };
@@ -22,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5937E6AE1C90831700BEA7C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59DB66621C84EFA3007731B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5937E6A21C90831700BEA7C2;
+			remoteInfo = "BioSwift iOS";
+		};
 		59DB66771C84EFA3007731B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 59DB66621C84EFA3007731B9 /* Project object */;
@@ -32,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5937E6A31C90831700BEA7C2 /* BioSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BioSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5937E6AC1C90831700BEA7C2 /* BioSwift iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BioSwift iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59CED51F1C8608250015DA3B /* example.fa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = example.fa; sourceTree = "<group>"; };
 		59CED5211C8609370015DA3B /* FASTAReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FASTAReader.swift; sourceTree = "<group>"; };
 		59CED5241C860A010015DA3B /* FASTAReaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FASTAReaderTests.swift; sourceTree = "<group>"; };
@@ -48,6 +69,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5937E69F1C90831700BEA7C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5937E6A91C90831700BEA7C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5937E6AD1C90831700BEA7C2 /* BioSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59DB66671C84EFA3007731B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -80,6 +116,8 @@
 			children = (
 				59DB666B1C84EFA3007731B9 /* BioSwift.framework */,
 				59DB66751C84EFA3007731B9 /* BioSwiftTests.xctest */,
+				5937E6A31C90831700BEA7C2 /* BioSwift.framework */,
+				5937E6AC1C90831700BEA7C2 /* BioSwift iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +150,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		5937E6A01C90831700BEA7C2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5937E6C11C908AB200BEA7C2 /* BioSwift.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59DB66681C84EFA3007731B9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,6 +169,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5937E6A21C90831700BEA7C2 /* BioSwift iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5937E6B81C90831700BEA7C2 /* Build configuration list for PBXNativeTarget "BioSwift iOS" */;
+			buildPhases = (
+				5937E69E1C90831700BEA7C2 /* Sources */,
+				5937E69F1C90831700BEA7C2 /* Frameworks */,
+				5937E6A01C90831700BEA7C2 /* Headers */,
+				5937E6A11C90831700BEA7C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BioSwift iOS";
+			productName = "BioSwift iOS";
+			productReference = 5937E6A31C90831700BEA7C2 /* BioSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5937E6AB1C90831700BEA7C2 /* BioSwift iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5937E6B91C90831700BEA7C2 /* Build configuration list for PBXNativeTarget "BioSwift iOSTests" */;
+			buildPhases = (
+				5937E6A81C90831700BEA7C2 /* Sources */,
+				5937E6A91C90831700BEA7C2 /* Frameworks */,
+				5937E6AA1C90831700BEA7C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5937E6AF1C90831700BEA7C2 /* PBXTargetDependency */,
+			);
+			name = "BioSwift iOSTests";
+			productName = "BioSwift iOSTests";
+			productReference = 5937E6AC1C90831700BEA7C2 /* BioSwift iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		59DB666A1C84EFA3007731B9 /* BioSwift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59DB667F1C84EFA3007731B9 /* Build configuration list for PBXNativeTarget "BioSwift" */;
@@ -169,6 +251,12 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Maciej Trybilo";
 				TargetAttributes = {
+					5937E6A21C90831700BEA7C2 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					5937E6AB1C90831700BEA7C2 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 					59DB666A1C84EFA3007731B9 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -191,11 +279,28 @@
 			targets = (
 				59DB666A1C84EFA3007731B9 /* BioSwift */,
 				59DB66741C84EFA3007731B9 /* BioSwiftTests */,
+				5937E6A21C90831700BEA7C2 /* BioSwift iOS */,
+				5937E6AB1C90831700BEA7C2 /* BioSwift iOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5937E6A11C90831700BEA7C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5937E6AA1C90831700BEA7C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5937E6BE1C9088FB00BEA7C2 /* example.fa in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59DB66691C84EFA3007731B9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,6 +319,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5937E69E1C90831700BEA7C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5937E6C41C908ABE00BEA7C2 /* FASTAReader.swift in Sources */,
+				5937E6C21C908ABA00BEA7C2 /* NucleicAcid.swift in Sources */,
+				5937E6BF1C908AAC00BEA7C2 /* Nucleotide.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5937E6A81C90831700BEA7C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5937E6C51C908ABE00BEA7C2 /* FASTAReader.swift in Sources */,
+				5937E6BC1C9088CD00BEA7C2 /* NucleicAcidTests.swift in Sources */,
+				5937E6C31C908ABB00BEA7C2 /* NucleicAcid.swift in Sources */,
+				5937E6BD1C9088CF00BEA7C2 /* FASTAReaderTests.swift in Sources */,
+				5937E6BB1C9088CA00BEA7C2 /* NucleotideTests.swift in Sources */,
+				5937E6C01C908AAD00BEA7C2 /* Nucleotide.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59DB66661C84EFA3007731B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,6 +368,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5937E6AF1C90831700BEA7C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5937E6A21C90831700BEA7C2 /* BioSwift iOS */;
+			targetProxy = 5937E6AE1C90831700BEA7C2 /* PBXContainerItemProxy */;
+		};
 		59DB66781C84EFA3007731B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 59DB666A1C84EFA3007731B9 /* BioSwift */;
@@ -248,6 +381,74 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		5937E6B41C90831700BEA7C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BioSwift/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maciejtrybilo.BioSwift;
+				PRODUCT_NAME = BioSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5937E6B51C90831700BEA7C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BioSwift/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maciejtrybilo.BioSwift;
+				PRODUCT_NAME = BioSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5937E6B61C90831700BEA7C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = BioSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maciejtrybilo.BioSwift-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5937E6B71C90831700BEA7C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = BioSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maciejtrybilo.BioSwift-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		59DB667D1C84EFA3007731B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -403,6 +604,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5937E6B81C90831700BEA7C2 /* Build configuration list for PBXNativeTarget "BioSwift iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5937E6B41C90831700BEA7C2 /* Debug */,
+				5937E6B51C90831700BEA7C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5937E6B91C90831700BEA7C2 /* Build configuration list for PBXNativeTarget "BioSwift iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5937E6B61C90831700BEA7C2 /* Debug */,
+				5937E6B71C90831700BEA7C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		59DB66651C84EFA3007731B9 /* Build configuration list for PBXProject "BioSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

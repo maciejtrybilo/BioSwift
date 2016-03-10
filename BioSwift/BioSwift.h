@@ -23,14 +23,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Cocoa/Cocoa.h>
-
-//! Project version number for BioSwift.
-FOUNDATION_EXPORT double BioSwiftVersionNumber;
-
-//! Project version string for BioSwift.
-FOUNDATION_EXPORT const unsigned char BioSwiftVersionString[];
-
 // In this header, you should import all the public headers of your framework using statements like #import <BioSwift/PublicHeader.h>
 
 
