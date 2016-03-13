@@ -31,10 +31,10 @@ public struct NucleicAcid: Equatable, CustomStringConvertible {
     public let desc: String?
     let nucleotides: [Nucleotide]
     
-    public init(nucleotides: [Nucleotide]) {
+    public init(nucleotides: [Nucleotide], identifier: String? = nil, desc: String? = nil) {
         
-        self.identifier = nil
-        self.desc = nil
+        self.identifier = identifier
+        self.desc = desc
         self.nucleotides = nucleotides
     }
     
@@ -83,6 +83,19 @@ public struct NucleicAcid: Equatable, CustomStringConvertible {
         }
         
         self.nucleotides = nucleotides
+    }
+    
+    public subscript(var subRange: Range<Int>) -> NucleicAcid? {
+        
+        if subRange.startIndex >= nucleotides.count {
+            return nil
+        }
+        
+        if subRange.endIndex >= nucleotides.count {
+            subRange.endIndex = nucleotides.count
+        }
+        
+        return NucleicAcid(nucleotides: Array<Nucleotide>(self.nucleotides[subRange]))
     }
     
     public func complement() -> NucleicAcid {

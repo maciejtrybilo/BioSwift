@@ -39,13 +39,13 @@ public struct FASTAReader {
             for line in lines {
                 
                 if line.hasPrefix(";") || line.hasPrefix(">") {
+                    
+                    if let nucleicAcid = NucleicAcid(currentSequence) {
                         
-                        if let nucleicAcid = NucleicAcid(currentSequence) {
-                        
-                            sequences += [nucleicAcid]
-                        }
-                        
-                        currentSequence = ""
+                        sequences += [nucleicAcid]
+                    }
+                    
+                    currentSequence = ""
                 }
                 
                 if !line.hasPrefix(";") && !line.isEmpty {
@@ -64,6 +64,50 @@ public struct FASTAReader {
         }
         
         return sequences
+    }
+    
+    public static func writeToFile(sequences: [NucleicAcid], atPath path: String, var numberOfCharactersInLine: Int = 80) {
+        
+        if numberOfCharactersInLine < 1 {
+            numberOfCharactersInLine = 80
+        }
+        
+        if let outputStream = NSOutputStream(toFileAtPath: path, append: false) {
+            outputStream.open()
+            writeSequences(sequences, toStream: outputStream, numberOfCharactersInLine: numberOfCharactersInLine)
+            
+        } else {
+            print("Could not open file \(path) for writing.")
+        }
+    }
+    
+    static func writeSequences(sequences: [NucleicAcid], toStream stream: NSOutputStream, numberOfCharactersInLine: Int) {
+    
+        for sequence in sequences {
+            
+            let defline = ">" + (sequence.identifier ?? "") + " " + (sequence.desc ?? "") + "\n"
+            
+            let data = defline.dataUsingEncoding(NSUTF8StringEncoding)!
+            stream.write(UnsafePointer<UInt8>(data.bytes), maxLength: data.length)
+            
+            print(defline)
+            print(sequence.toString())
+            
+            var start = 0
+            var end = numberOfCharactersInLine
+            
+            while let line = sequence[start..<end]?.toString() {
+                
+                let data = (line + "\n").dataUsingEncoding(NSUTF8StringEncoding)!
+                stream.write(UnsafePointer<UInt8>(data.bytes), maxLength: data.length)
+                print(line)
+                
+                start += numberOfCharactersInLine
+                end += numberOfCharactersInLine
+            }
+        }
+        
+        stream.close()
     }
 }
 
